@@ -1,0 +1,18 @@
+mixin menu(link, texto)
+    li
+        a(href=link)= texto
+
+header
+  
+    .grid-container
+        .logo
+            img(src="logo_bloom.png") 
+        
+        .menu
+            nav
+                ul
+                    +menu('home.html', 'Home')
+                    +menu('about.html', 'About Us')
+                    +menu('services.html', 'Services')
+                    +menu('portfolio.html', 'Portfolio')
+                    +menu('contato.html', 'Contact Us')    

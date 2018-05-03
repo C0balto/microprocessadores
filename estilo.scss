@@ -1,0 +1,281 @@
+*,*::before,*:after{box-sizing: border-box;}
+
+    .grid-container {
+        display:grid; max-width: 1200px; width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: repeat(12,7%);
+        grid-template-rows: repeat(2, 4%); 
+        grid-gap: 10px calc( (100% - 7%*12)/11 ); /*grid-row-gap e grid-column-gap com função de calc*/
+        color:#5d7e92;
+    }
+    .grid-container-w-col {
+        display:grid; max-width: 1200px; width:100%;
+        grid-template-columns: repeat(12,7%);
+        grid-template-rows: repeat(5, 4%); 
+        grid-gap: 10px calc( (100% - 7%*12)/11 ); /*grid-row-gap e grid-column-gap com função de calc*/
+        color:#5d7e92;
+    }
+    .logo {grid-area: 1/2/1/7}
+    .menu {grid-area: 1/span 6}
+    .boxtxt {grid-area: 1/2/1/7}
+    .boximg {grid-area: 1/7/1/12}
+    .boxnotices {grid-area: 1/2/1/12}
+    .notice1 {grid-area: 2/2/2/5}
+    .notice2 {grid-area: 2/5/2/9}
+    .notice3 {grid-area: 2/9/2/12}
+    /*footer grid*/
+    .calendar {grid-area:1/2/1/5}
+    .sobre {grid-area:1/4/1/10}
+    .midias {grid-area:1/10/1/12}
+    .copyright {grid-area:2/4/2/11}
+body {
+  margin-top: 0em;
+ 
+}
+
+header {
+        background-color: rgb(49, 47, 47);
+        .grid-container{
+            .menu, .logo {
+            padding-top: 20px;
+            }
+            .menu{
+                nav ul li {
+                    display: inline-block;
+                    padding-left:25px;
+                    text-align: right;
+                    
+                    
+                    
+                    a {
+                            color:white;
+                            font-family: 'verdana';
+                            font-size: 0.8em;
+                            text-decoration: none;
+                        }
+                }
+            }
+        }
+}
+
+section#miolo {
+    padding-bottom: 5em;
+    background-color:lightgrey;
+    .grid-container {
+        
+        padding-top:100px;
+        .boxtxt {
+            color:black;
+            padding: 0px;
+            margin-left:0px;
+            text-align: left;
+
+            h1 {
+                padding: 0;
+                margin:0;
+            }
+            p {
+                font-size:0.7em;
+                
+                font-family: 'verdana';
+            }
+            a {
+                
+                padding: 5px 30px 5px 30px;
+                border: solid 0px;
+                border-radius: 2px;
+                background-color: #ff6600;
+                text-decoration: none;
+                color:white;
+                font-family: 'verdana';
+                font-size: 0.8em;
+                font-weight: bold;
+                
+                
+            }
+
+        }
+        .boximg {
+            img {
+                width:100%;
+            }
+        }
+    }
+
+}
+section#notices {
+    padding-bottom: 5em;
+    background-color:white;
+    .grid-container {
+        padding-top:80px;
+     
+        .notice1> div, .notice2 > div, .notice3 > div{
+            width: 280px;
+            height: 150px;
+            position: relative;
+            background: black;
+            
+
+        }
+        .notice2 {
+            padding: 0 50px 0 50px;
+        }
+        .notice3 {
+            padding: 0 0 0 8px;
+        }
+
+        a {
+                
+            padding: 5px 30px 5px 30px;
+            border: solid 0px;
+            border-radius: 2px;
+            background-color: #ff6600;
+            text-decoration: none;
+            color:white;
+            font-family: 'verdana';
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+    }   
+}
+
+footer {
+    background-color:rgb(49, 47, 47);
+    .grid-container {
+        padding-top:80px;
+        padding-bottom: 40px;
+
+        .calendar {
+            
+           h3 {
+               padding: 5px 0 0 0 ;
+                color:white;
+                font-family: 'verdana';
+                font-size: 1em;
+            }
+           ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+                .datebox {
+                    display: flex;
+                    flex-direction: row;
+                    border: solid 0px;
+                    text-decoration: none;
+                    color:black;
+                    font-family: 'verdana';
+                    font-size: 0.8em;
+                    font-weight: bold; 
+
+                    span {
+                        padding: 0 0 0 10px;
+                        font-family: 'verdana';
+                        color:white;
+
+                    }
+                    section {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    border-radius: 5px;
+                    text-align: center;
+                        
+                        .mes {
+                            width: 45px;
+                            height: 20px;
+                            padding-top:8px;
+                            font-family: 'verdana';
+
+                        }
+                        .dia {
+                            width: 45px;
+                            height: 25px;
+                           
+                            font-size: 1.5em;
+                            font-family: 'verdana'
+
+
+                        }
+                   
+
+                    }
+
+                }
+            
+            }
+
+        }
+
+
+
+        .sobre {
+            padding: 0 20px 0 110px;
+            h3{
+                font-family: 'verdana';
+                font-size: 1em;
+                padding: 0 0 0 40px;
+                color:white;
+                }
+            div {
+                font-family: 'verdana';
+                font-size: 0.8em;
+                padding: 0 0 0 40px;
+                height: 50px;
+                color:white;
+                text-align: justify;
+            }
+        }
+
+
+
+        .midias{
+            padding-left: 50px;
+            h3 {
+            font-family: 'verdana';
+            font-size: 1em;
+            padding: 0;
+            color:white;
+            }
+        }
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+           padding-bottom: 10px;
+            img {
+                width:35px;
+                padding: 0;
+                margin: 0;
+               
+           }
+            a {
+               text-decoration: none;
+               display: flex;
+               flex-direction: row;
+               color:white;
+               font-family: 'verdana';
+               font-size: 0.8em;
+               
+
+            }
+        }
+       
+    }
+    
+}
+
+.txt {
+    margin: 10px 0 0 5px;
+    
+    
+}
+
+
+section {
+    background-color: white;
+  
+}

@@ -1,0 +1,50 @@
+mixin midias(link, src, texto)
+    li.item
+        a(href=link)
+            img(src=src)
+            span.txt=texto
+
+mixin data(texto) 
+        li.item
+            div.datebox
+                section#calendar
+                    .mes
+                    .dia 
+                span(texto)=texto
+
+
+
+footer
+    
+    .grid-container
+        .calendar
+            h3 Latest Post
+            ul
+                +data('IpsumLorem lalalala vai vai')
+                +data('IpsumLorem lalalala vai vai')
+                +data('IpsumLorem lalalala vai vai')
+                
+               
+
+       
+        .sobre
+            h3 About
+            div 
+                p Sed laoreet convallis scelerisque.Pellentesque elit libero, rutrum faucibus arcu in, viverra varius Lorem ipsum dolor sit amet, consectetur adipiscing elit.Sed laoreet convallis scelerisque. Pellentesque elit libero, rutrum faucibus arcu in, viverra varius Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                p Sed laoreet convallis celerisque. Pellentesque elit libero, rutrum faucibus arcu in, viverra varius Lorem ipsum dolor sit amet, consectetur adipiscing elit  
+        .midias
+            h3 Stay Conected
+            ul
+                +midias('http://facebook.com', 'facebutton.png', 'Facebook') 
+                +midias('http://twitter.com', 'twitterbutton.png', 'Twitter')
+                +midias('http://google.com', 'gplusbutton.png', 'Google+') 
+                +midias('http://feedrss.com', 'rssbutton.png', 'Rss')
+        
+section
+    .grid-container
+        .copyright
+            div
+                p Copyright 2018 Hewerton Aula Pós em Web professor Jademir cadeira de microprocessadores
+
+Script
+    include script.js
